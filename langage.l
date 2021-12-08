@@ -16,33 +16,24 @@
 \r     { }
 " "    { }
 \t     { }
-sin(us|) { return SIN;  } 
-cos(inus|) { return COS;  } 
-tan(ge(a|)(n|m)te) { return TAN; }
-zero  { yylval.valeur = 1. ; return NUM; }
+Sin|SIN|sin|sinus|Sinus|SINUS { return SIN;  }
+Cos|COS|cos { return COS;  }
 un      { yylval.valeur = 1. ; return NUM; }
 deux    { yylval.valeur = 2. ; return NUM; }
 trois   { yylval.valeur = 3. ; return NUM; }
-quatre  { yylval.valeur = 4. ; return NUM; }
-cinq  { yylval.valeur = 5. ; return NUM; }
-six   { yylval.valeur = 6. ; return NUM; }
-sept     { yylval.valeur = 7. ; return NUM; }
-huit    { yylval.valeur = 8. ; return NUM; }
-neuf   { yylval.valeur = 9. ; return NUM; }
-
 plus    { return ADD;}
-m(oi|oa)n(|s) { return SUB;} 
-foi(s|)    { return MULT; } 
-divi(s|z)e  { return DIV;}
-
-(s|c)i  { return SI;}
-f(in|aim)(C|S)i { return FINSI;} 
-(s|c)inon  { return SINON;}
-(u|i)(m|n)prim(e|) {return PRINT;}
-t(a|e)(n|m)(t|p|d|)(s|)Que(ue|) { return TANTQUE;} 
-f(in|aim)T(a|e)(n|m)(t|p|d|)(s|)Que(ue|) { return FINTANTQUE;} 
-GoTo { return GOTO;} //mettre de la couleur sur goto
-al(l|)e(z|)atoire { return RAND;} 
+moins   { return SUB;}
+fois    { return MULT; }
+divise  { return DIV;}
+si|ci  { return SI;}
+finSi|finCi|faimSi|faimCi { return FINSI;}
+sinon|sinon|cinon  { return SINON;}
+imprime|unprime|imprim|unprim {return PRINT;}
+tantQue|tempsQue|tentQue|tendQue|tenQue|tantQueue { return TANTQUE;}
+finTantQue|finTempsQue|finTentQue|finTendQue|finTenQue|finTantQueue|faimTantQue|faimTempsQue|faimTentQue { return FINTANTQUE;}
+moins|moin|moan { return SUB;}
+GoTo { return GOTO;}
+aleatoire|allezatoire { return RAND;}
 
 
 "//".* { }

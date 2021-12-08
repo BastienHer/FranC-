@@ -1,6 +1,3 @@
-a=1
-TantQue (a<5)
-a=a+1
-Imprime(a)
-FinTantQue
-Imprime(a)
+a = 3
+imprime(a)
+
